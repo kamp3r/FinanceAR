@@ -53,6 +53,29 @@ html {
         text-decoration: none;
         color: #fff; }
 
+.footer {
+  width: 100%;
+  height: 20rem;
+  background-color: #000;
+  display: flex;
+  flex-direction: column; }
+  .footer .footerElements {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .footer .footerElements img {
+      margin: 4rem;
+      width: 5rem; }
+  .footer div {
+    display: flex;
+    justify-content: center;
+    width: 100%; }
+    .footer div .footerText {
+      color: #fff;
+      font-size: 2.5rem; }
+
 #inicio {
   background-image: url(../images/svgBg1.svg);
   width: 100%;
@@ -193,7 +216,7 @@ html {
     width: 100%;
     height: 70rem; }
     #contenedorSimulador #simulador #simuladorCampos {
-      background: #9665e4a9;
+      background: #aa83e9a9;
       color: white;
       display: flex;
       flex-flow: row wrap;
