@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;500&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="CSS/Styles.css">
+    <title>FinanceAR</title>  
+</head>
+<body>
+    <header>
+        <nav class="navigation">
+            <a href=""><img class="logoFinan" src="images/financearlogo.svg" alt=""></a>
+            <ul class="navigationContainer">
+                <li class="containerLink">
+                    <a href="#inicio" class="linkItem">Home</a>
+                </li>
+                <li class="containerLink">
+                    <a href="#quienesSomos" class="linkItem">Quienes somos</a>
+                </li>
+                <li class="containerLink">
+                    <a href="#servicios" class="linkItem">Servicios</a>
+                </li>
+                <li class="containerLink">
+                    <a href="#simulador" class="linkItem">Simula tu prestamo!</a>
+                </li>
+            </ul>
+            <div class="navigationButtons">
+                <button class="buttons__login"><a href="">Iniciar Sesion</a></button>
+                <button class="buttons__sing"><a href="">Registrarse</a></button>
+            </div>
+        </nav>
+    </header>
+    <section id="inicio">
+        <article>
+            <h2>Te brindamos la solucion que necesitas, <span>con un solo click</span></h2>
+            <button>Empeza a operar</button>
+        </article>
+        <div class="contenedorInicioImagen">
+            <img src="images/humansvg.svg" alt="persona con su pc">
+        </div>
+    </section>
+
+    <section id="quienesSomos">
+
+        <div class="contenedorCardsQuienes">
+            <article class="cardQuienes">
+                <img src="images/dibujoCard1.svg" alt="">
+                <h3>Expertos en Finanzas</h3>
+                <p>Desarrollamos planes de creditos, destinados al crecimiento de los proyectos personales y empresariales</p>
+            </article>
+            <article class="cardQuienes">
+                <img src="images/dibujoCard2.svg" alt="">
+                <h3>Seguridad</h3>
+                <p>Somos una de las empresas lideres en cuanto a seguridad financiera, tanto en ambito digital como fisico</p>
+            </article >
+            <article class="cardQuienes">
+                <img src="images/dibujoCard3.svg" alt="">
+                <h3>Opera tranquilo</h3>
+                <p>Con nosotros vas a tener total transparencia de solicitar y verificar el estado de tus finanzas</p>
+            </article>
+        </div>
+
+    </section>
+
+    <section id="contenedorSimulador">
+    <h2>Simula tu Credito!</h3>
+
+    <form id="simulador" action="">
+        <ul id="simuladorCampos">
+            <li><label for="nombre" class="labelInputs">Nombre: </label><input type="text" id="nombre" placeholder="Ingresa tu nombre" class="inputsValues formName"></li>
+            <li><label for="apellido" class="labelInputs">Apellido: </label><input type="text" id="apellido" placeholder="Ingresa tu apellido" class="inputsValues formLast"></li>
+            <li><label for="rango">Rango de Valores:</label><input type="range" name="rango" id="inputRange" step="1000" value="0" min="1" max="1000000" class="inputsValues formRango" ></li>
+            <li><label for="aSolicitar" class="labelInputs">Valor: </label><input type="number" value="0" name="aSolicitar" id="aSolicitar" for="inputRange" class="inputsValues formValue"></li>
+            <li><label for="mail" class="labelInputs">Email: </label><input type="email" id="mail" placeholder="Ingresa tu mail ¨ejemplo@ejemplo.com¨" class="formEmail inputsValues"></li>
+            <li><label for="menuPlazos" class="labelInputs">Plazos de cancelacion: </label><select name="menuPlazos" id="menuPlazos" class="inputsValues">
+                <option selected disabled value="opt1">Elige el plazo de cancelacion, se encuentra expresado en meses</option>
+                <option type="number" value="12">12 meses</option>
+                <option type="number" value="24">24 meses</option>
+                <option type="number" value="36">36 meses</option>
+            </select></li>
+            <li><label for="botonCalc"></label><button type="submit" id="botonCalc">Calcula tu cuota!</button></li>
+            <li><label for="tasasSeleccion" id="tasasLabel" class="noMostrar">TEM(Tasa Efectiva Mensual): </label><output id="tasasSeleccion" class="noMostrar"></output></li>
+            <li><label for="botonCalc"></label><button type="submit" id="botonEnviar" class="noMostrar">Enviar Solicitud</button></li>
+        </ul>
+    </form>
+    <article class="contenedorTabla">
+        <table class="tftable noMostrar" id="tablaPrestamos" border="0">
+            <thead>    
+                <tr>
+                    <th>Fecha de Vencimiento</th>
+                    <th>Cuota</th>
+                    <th>Amortizacion de Capital</th>
+                    <th>Intereses</th>
+                    <th>Monto deudor</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </article>
+    </section>
+    <script src="/JS/main.js"></script>
+</body>
+</html>
