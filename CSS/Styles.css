@@ -41,7 +41,7 @@ html {
     justify-content: space-around; }
     .navigation .navigationButtons button {
       background: linear-gradient(174.48deg, #36419F -12.41%, #9632E4 91.04%);
-      border-radius: 6px;
+      border-radius: 4rem;
       padding: 1rem 2rem;
       margin-left: 2rem;
       border: none;
@@ -49,6 +49,7 @@ html {
       height: 5rem; }
       .navigation .navigationButtons button a {
         font-weight: bolder;
+        font-size: 1.6rem;
         text-decoration: none;
         color: #fff; }
 
@@ -76,17 +77,25 @@ html {
       font-weight: 300;
       width: 100%; }
       #inicio article h2 span {
-        font-weight: bold; }
+        font-weight: bold;
+        background: -webkit-linear-gradient(#7c5ff0, #ce76ce);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; }
     #inicio article button {
       margin: 2rem;
-      font-family: "Poppins", sans-serif;
-      background-color: #f0efefea;
+      background-color: #340141ea;
       width: 24rem;
       height: 9rem;
       border-style: none;
-      border-radius: 10rem;
-      font-weight: bold;
-      font-size: 2.4rem; }
+      border-radius: 10rem; }
+      #inicio article button a {
+        background: -webkit-linear-gradient(#7c5ff0, #ce76ce);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-decoration: none;
+        font-family: "Poppins", sans-serif;
+        font-weight: bold;
+        font-size: 2.4rem; }
   #inicio .contenedorInicioImagen {
     width: 50%;
     text-align: center; }
@@ -95,13 +104,59 @@ html {
       filter: brightness(120%);
       filter: contrast(150%); }
 
-.contenedorCardsQuienes {
+#confiarEn {
+  background-image: url(../images/bgQuienes.svg);
+  width: 100%;
+  height: 120rem; }
+  #confiarEn h2 {
+    text-align: center;
+    font-size: 6rem;
+    background: -webkit-linear-gradient(#3a2697, #d32dd3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }
+  #confiarEn .contenedorConfiar {
+    display: flex;
+    width: 100%;
+    height: 100rem;
+    align-items: center;
+    justify-content: center; }
+    #confiarEn .contenedorConfiar .cardConfiar {
+      margin: 2rem;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      background: #ffffff;
+      box-shadow: 0 8px 16px 0 rgba(83, 35, 160, 0.404);
+      width: 30%;
+      height: 80rem;
+      border-radius: 4rem; }
+      #confiarEn .contenedorConfiar .cardConfiar img {
+        width: 80%;
+        border-radius: 2rem; }
+      #confiarEn .contenedorConfiar .cardConfiar h3 {
+        font-size: 4rem;
+        color: #000; }
+      #confiarEn .contenedorConfiar .cardConfiar p {
+        font-size: 2rem;
+        color: #000; }
+
+#servicios h2 {
+  text-align: center;
+  font-size: 6rem;
+  background: -webkit-linear-gradient(#3a2697, #d32dd3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; }
+
+#servicios .contenedorCardsServicios {
   display: flex;
   width: 100%;
   height: 100rem;
   align-items: center;
   justify-content: center; }
-  .contenedorCardsQuienes .cardQuienes {
+  #servicios .contenedorCardsServicios .cardServicios {
     margin: 2rem;
     padding: 2rem;
     display: flex;
@@ -112,16 +167,17 @@ html {
     background: #ffffff;
     box-shadow: 0 8px 16px 0 rgba(83, 35, 160, 0.404);
     width: 30%;
-    height: 80rem;
+    height: 60rem;
     border-radius: 4rem; }
-    .contenedorCardsQuienes .cardQuienes img {
-      width: 80%;
+    #servicios .contenedorCardsServicios .cardServicios img {
+      width: 40%;
       border-radius: 2rem; }
-    .contenedorCardsQuienes .cardQuienes h3 {
-      font-size: 4rem;
-      color: #000; }
-    .contenedorCardsQuienes .cardQuienes p {
-      font-size: 2rem;
+    #servicios .contenedorCardsServicios .cardServicios h3 {
+      font-size: 3rem;
+      color: #000;
+      margin: 4rem; }
+    #servicios .contenedorCardsServicios .cardServicios p {
+      font-size: 1.8rem;
       color: #000; }
 
 #contenedorSimulador {
