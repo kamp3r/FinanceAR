@@ -55,10 +55,7 @@ html {
 
 .footer {
   width: 100%;
-  height: 20rem;
-  background-color: #000;
-  display: flex;
-  flex-direction: column; }
+  background-color: #000; }
   .footer .footerElements {
     list-style: none;
     width: 100%;
@@ -204,7 +201,8 @@ html {
       color: #000; }
 
 #contenedorSimulador {
-  background-image: url(../images/backform.svg); }
+  background-image: url(../images/backform.svg);
+  min-height: 50vh; }
   #contenedorSimulador h2 {
     text-align: center;
     color: #fafafa;
@@ -253,7 +251,8 @@ html {
           cursor: pointer; }
   #contenedorSimulador .contenedorTabla {
     display: flex;
-    justify-content: center; }
+    justify-content: center;
+    height: fit-content; }
     #contenedorSimulador .contenedorTabla #tablaPrestamos {
       width: 50%;
       margin: 2rem 0;
