@@ -151,7 +151,7 @@ html {
       background: #ffffff;
       box-shadow: 0 8px 16px 0 rgba(83, 35, 160, 0.404);
       width: 30%;
-      height: 80rem;
+      height: 70rem;
       border-radius: 4rem; }
       #confiarEn .contenedorConfiar .cardConfiar img {
         width: 80%;
@@ -163,50 +163,59 @@ html {
         font-size: 2rem;
         color: #000; }
 
-#servicios h2 {
-  text-align: center;
-  font-size: 6rem;
-  background: -webkit-linear-gradient(#3a2697, #d32dd3);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; }
-
-#servicios .contenedorCardsServicios {
-  display: flex;
-  width: 100%;
-  height: 100rem;
-  align-items: center;
-  justify-content: center; }
-  #servicios .contenedorCardsServicios .cardServicios {
-    margin: 2rem;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
+#servicios {
+  background-image: url(../images/backgroundCards.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
+  #servicios h2 {
     text-align: center;
+    font-size: 6rem;
+    background: -webkit-linear-gradient(#3a2697, #d32dd3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }
+  #servicios .contenedorCardsServicios {
+    display: flex;
+    width: 100%;
+    height: 100rem;
     align-items: center;
-    justify-content: center;
-    background: #ffffff;
-    box-shadow: 0 8px 16px 0 rgba(83, 35, 160, 0.404);
-    width: 30%;
-    height: 60rem;
-    border-radius: 4rem; }
-    #servicios .contenedorCardsServicios .cardServicios img {
-      width: 40%;
-      border-radius: 2rem; }
-    #servicios .contenedorCardsServicios .cardServicios h3 {
-      font-size: 3rem;
-      color: #000;
-      margin: 4rem; }
-    #servicios .contenedorCardsServicios .cardServicios p {
-      font-size: 1.8rem;
-      color: #000; }
+    justify-content: center; }
+    #servicios .contenedorCardsServicios .cardServicios {
+      margin: 2rem;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      background: #ffffff;
+      box-shadow: 0 8px 16px 0 rgba(83, 35, 160, 0.404);
+      width: 30%;
+      height: 60rem;
+      border-radius: 4rem; }
+      #servicios .contenedorCardsServicios .cardServicios img {
+        width: 40%;
+        border-radius: 2rem; }
+      #servicios .contenedorCardsServicios .cardServicios h3 {
+        font-size: 3rem;
+        color: #000;
+        margin: 4rem; }
+      #servicios .contenedorCardsServicios .cardServicios p {
+        font-size: 1.8rem;
+        color: #000; }
 
 #contenedorSimulador {
-  background-image: url(../images/backform.svg);
-  min-height: 50vh; }
+  background-image: url(../images/background-form.svg);
+  min-height: 50vh;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover; }
   #contenedorSimulador h2 {
     text-align: center;
-    color: #fafafa;
-    font-size: 3rem;
+    background: -webkit-linear-gradient(#3a2697, #d32dd3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 6rem;
     padding: 7rem; }
   #contenedorSimulador #simulador {
     display: flex;
@@ -250,9 +259,7 @@ html {
           display: block;
           cursor: pointer; }
   #contenedorSimulador .contenedorTabla {
-    display: flex;
-    justify-content: center;
-    height: fit-content; }
+    display: none; }
     #contenedorSimulador .contenedorTabla #tablaPrestamos {
       width: 50%;
       margin: 2rem 0;

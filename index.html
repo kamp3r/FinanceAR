@@ -98,23 +98,23 @@
         <ul id="simuladorCampos">
             <li><label for="nombre" class="labelInputs">Nombre: </label><input type="text" id="nombre" placeholder="Ingresa tu nombre" class="inputsValues formName"></li>
             <li><label for="apellido" class="labelInputs">Apellido: </label><input type="text" id="apellido" placeholder="Ingresa tu apellido" class="inputsValues formLast"></li>
-            <li><label for="rango">Rango de Valores:</label><input type="range" name="rango" id="inputRange" step="1000" value="0" min="1" max="1000000" class="inputsValues formRango" ></li>
-            <li><label for="aSolicitar" class="labelInputs">Valor: </label><input type="number" value="0" name="aSolicitar" id="aSolicitar" for="inputRange" class="inputsValues formValue"></li>
+            <li><label for="rango">Rango de Valores:</label><input type="range" name="rango" id="inputRange" step="1000" value="0" min="0" max="500001" class="inputsValues formRango" ></li>
+            <li><label for="aSolicitar" class="labelInputs">Valor: </label><input type="number" value="0" name="aSolicitar" id="aSolicitar" class="inputsValues formValue"></li>
             <li><label for="mail" class="labelInputs">Email: </label><input type="email" id="mail" placeholder="Ingresa tu mail ¨ejemplo@ejemplo.com¨" class="formEmail inputsValues"></li>
             <li><label for="menuPlazos" class="labelInputs">Plazos de cancelacion: </label><select name="menuPlazos" id="menuPlazos" class="inputsValues">
-                <option selected disabled value="opt1">Elige el plazo de cancelacion, se encuentra expresado en meses</option>
+                <option type="number" value="" disabled selected>Elegi una Opcion</option>
                 <option type="number" value="12">12 meses</option>
                 <option type="number" value="24">24 meses</option>
                 <option type="number" value="36">36 meses</option>
             </select></li>
             <li><label for="botonCalc"></label><button type="submit" id="botonCalc">Calcula tu cuota!</button></li>
             <li><label for="tasasSeleccion" id="tasasLabel" class="noMostrar">TEM(Tasa Efectiva Mensual): </label><output id="tasasSeleccion" class="noMostrar"></output></li>
-            <li><label for="botonCalc"></label><button type="submit" id="botonEnviar" class="noMostrar">Enviar Solicitud</button></li>
+            <li><label for="botonEnviar"></label><button type="submit" id="botonEnviar">Enviar Solicitud</button></li>
         </ul>
     </form>
-    <article class="contenedorTabla">
+    <article class="contenedorTabla noMostrar">
         <table class="tftable noMostrar" id="tablaPrestamos" border="0">
-            <thead>    
+            <thead>  
                 <tr>
                     <th>Fecha de Vencimiento</th>
                     <th>Cuota</th>
@@ -123,7 +123,7 @@
                     <th>Monto deudor</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="tablaBody noMostrar">
 
             </tbody>
         </table>
@@ -148,6 +148,10 @@
             <p class="footerText">Copyright 2021®</p>
         </div>
       </footer>
-    <script src="JS/main.js"></script>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.20/jspdf.plugin.autotable.min.js"></script>  
+    <script src="JS/jquery-3.6.0.min.js"></script>
+    <script src="JS/Intento.JS"></script>
 </body>
 </html>
