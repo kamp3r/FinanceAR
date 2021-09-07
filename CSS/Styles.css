@@ -206,7 +206,7 @@ html {
 
 #contenedorSimulador {
   background-image: url(../images/background-form.svg);
-  min-height: 50vh;
+  min-height: 100vh;
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: cover; }
@@ -217,62 +217,152 @@ html {
     -webkit-text-fill-color: transparent;
     font-size: 6rem;
     padding: 7rem; }
-  #contenedorSimulador #simulador {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 70rem; }
-    #contenedorSimulador #simulador #simuladorCampos {
-      background: #aa83e9a9;
-      color: white;
+  #contenedorSimulador .contenedorForm {
+    width: 25%;
+    height: 60rem;
+    margin: 3% auto;
+    background: #cd6fecd2;
+    border-radius: 1rem;
+    position: relative;
+    transition: 0.5s;
+    overflow: hidden; }
+    #contenedorSimulador .contenedorForm h3 {
+      text-align: center;
+      font-size: 2rem;
+      background: -webkit-linear-gradient(#5b86cf, #5f0d8fb2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      width: 100%; }
+    #contenedorSimulador .contenedorForm form {
       display: flex;
-      flex-flow: row wrap;
-      align-content: space-between;
-      justify-content: space-between;
-      list-style: none;
-      font-size: 2.5rem;
-      width: 120rem;
+      flex-direction: column;
+      justify-content: center;
+      height: 40rem;
+      width: 60%;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 15rem;
+      left: 10rem; }
+    #contenedorSimulador .contenedorForm p {
+      font-size: 1.5rem;
+      text-align: center;
+      color: #fafafa; }
+    #contenedorSimulador .contenedorForm input {
+      width: 100%;
+      padding: 1rem 0.5rem;
+      margin: 0.5rem 0;
+      border: 0;
+      border-bottom: 1px solid #3C1C78;
+      outline: none;
+      background: transparent;
+      color: #ffffff; }
+    #contenedorSimulador .contenedorForm #menuPlazos {
+      position: relative;
+      display: block;
+      max-width: 400px;
+      min-width: 180px;
+      margin: 0 auto;
+      border-bottom: 1px solid #3C1C78;
+      background-color: #d589eed2;
+      z-index: 0; }
+    #contenedorSimulador .contenedorForm select {
+      border: none;
+      outline: none;
+      background: transparent;
+      border-radius: 0;
+      margin: 0;
+      display: block;
+      width: 100%;
+      padding: 1rem;
+      font-size: 1.2rem;
+      color: #ffffff; }
+    #contenedorSimulador .contenedorForm select:after {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 50px;
+      height: 100%;
+      line-height: 38px;
+      content: '\2228';
+      text-align: center;
+      color: #714BB9;
+      font-size: 24px;
+      border-left: 1px solid #3C1C78;
+      z-index: -1; }
+    #contenedorSimulador .contenedorForm ::placeholder {
+      color: #ffffff;
+      font-family: 'Poppins', sans-serif; }
+    #contenedorSimulador .contenedorForm .contenedorBotones {
+      width: 100%;
+      margin: 3rem auto;
+      text-align: center; }
+    #contenedorSimulador .contenedorForm button {
+      width: 12rem;
+      height: 4.5rem;
+      font-size: 1.6rem;
+      font-weight: bold;
+      margin: 0 1rem;
+      background: linear-gradient(to right, #36419F -12.41%, #9632E4 91.04%);
+      color: #fafafa;
+      border: none;
+      outline: none;
+      cursor: pointer;
       border-radius: 2rem; }
-      #contenedorSimulador #simulador #simuladorCampos li {
-        margin: 3rem; }
-        #contenedorSimulador #simulador #simuladorCampos li .li:nth-child(2n) {
-          line-break: after; }
-        #contenedorSimulador #simulador #simuladorCampos li input {
-          width: 30rem; }
-        #contenedorSimulador #simulador #simuladorCampos li select {
-          width: 20rem; }
-        #contenedorSimulador #simulador #simuladorCampos li #botonCalc, #contenedorSimulador #simulador #simuladorCampos li #botonEnviar {
-          font-family: 'Poppins', sans-serif;
-          font-size: 1.8rem;
-          font-weight: bold;
-          background: linear-gradient(174.48deg, #36419F -12.41%, #9632E4 91.04%);
-          color: white;
-          margin: 1rem;
-          padding: 2rem;
-          text-align: center;
-          text-transform: uppercase;
-          transition: 0.5s;
-          border: none;
-          background-size: 200% auto;
-          box-shadow: 0 0 20px #2c0329;
-          border-radius: 10px;
-          display: block;
-          cursor: pointer; }
+    #contenedorSimulador .contenedorForm #enviar {
+      width: 25rem;
+      height: 8rem;
+      font-size: 1.6rem;
+      font-weight: bold;
+      margin: 0 1rem;
+      background: linear-gradient(to right, #36419F -12.41%, #9632E4 91.04%);
+      color: #fafafa;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      border-radius: 2rem; }
+    #contenedorSimulador .contenedorForm #formSimulador1 {
+      left: 60rem; }
+    #contenedorSimulador .contenedorForm #formSimulador2 {
+      left: 60rem; }
+    #contenedorSimulador .contenedorForm #formSimulador3 {
+      left: 60rem; }
+    #contenedorSimulador .contenedorForm #formSimulador4 {
+      left: 60rem; }
+    #contenedorSimulador .contenedorForm .flecha-pasos {
+      width: 100%;
+      height: 5.8rem;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 -1px 5px -1px #000;
+      background-color: #000;
+      position: relative; }
+    #contenedorSimulador .contenedorForm .pasos-flecha {
+      font-size: 1rem;
+      width: 100%;
+      text-align: center;
+      color: #c5b1b1;
+      position: relative; }
+    #contenedorSimulador .contenedorForm #progreso {
+      position: absolute;
+      height: 100%;
+      width: 0rem;
+      background: linear-gradient(to right, #36419F -12.41%, #9632E4 91.04%);
+      transition: 1s;
+      border-top-right-radius: 2px;
+      border-bottom-right-radius: 2px; }
+    #contenedorSimulador .contenedorForm #progreso::after {
+      content: '';
+      height: 0;
+      width: 0;
+      border-top: 30px solid transparent;
+      border-bottom: 30px solid transparent;
+      position: absolute;
+      right: -20px;
+      top: 0;
+      border-left: 20px solid #9632E4; }
+    #contenedorSimulador .contenedorForm .paso1, #contenedorSimulador .contenedorForm .paso2, #contenedorSimulador .contenedorForm .paso3, #contenedorSimulador .contenedorForm .paso4 {
+      transition: .2s ease-in-out; }
   #contenedorSimulador .contenedorTabla {
     display: none; }
-    #contenedorSimulador .contenedorTabla #tablaPrestamos {
-      width: 50%;
-      margin: 2rem 0;
-      text-align: center;
-      font-size: 2.2rem;
-      border-radius: 1.5rem 1.5rem  0 0;
-      overflow: hidden; }
-      #contenedorSimulador .contenedorTabla #tablaPrestamos thead tr {
-        background: #5f14c2b7;
-        color: white; }
-      #contenedorSimulador .contenedorTabla #tablaPrestamos tbody tr {
-        background-color: #e5bbeeb4;
-        color: rgba(0, 0, 0, 0.7); }
-      #contenedorSimulador .contenedorTabla #tablaPrestamos tbody tr:nth-of-type(even) {
-        background: #f1e8fd9d;
-        color: rgba(0, 0, 0, 0.7); }

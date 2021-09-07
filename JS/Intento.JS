@@ -1,3 +1,54 @@
+
+//inicio paso 1
+$("#siguiente1").on("click", () => {
+    $("#formSimulador0").animate({left: '-1000px'});
+    $("#formSimulador1").animate({left: '100px'});
+    $('#progreso').width("120px")
+    $('.paso1').css({ filter: "invert(0) sepia(8) saturate(30) hue-rotate(260deg)" , opacity: "1"})
+})
+$("#anterior0").on("click", () => {
+    $("#formSimulador0").animate({left: '100px'});
+    $("#formSimulador1").animate({left: '1000px'});
+    $('#progreso').width("-120px")
+    $('.paso1').css({ filter: "invert(0) sepia(1) saturate(0) hue-rotate(260deg)", opacity: "0.9"})
+})
+
+//paso 1 a paso 2
+$("#siguiente2").on("click", () => {
+    $("#formSimulador1").animate({left: '-1000px'});
+    $("#formSimulador2").animate({left: '100px'});
+    $('#progreso').width("240px")
+    $('.paso2').css({ filter: "invert(0) sepia(8) saturate(30) hue-rotate(260deg)" , opacity: "1"})
+})
+$("#anterior1").on("click", () => {
+    $("#formSimulador1").animate({left: '100px'});
+    $("#formSimulador2").animate({left: '1000px'});
+    $('#progreso').width("120px")
+    $('.paso2').css({ filter: "invert(0) sepia(1) saturate(0) hue-rotate(260deg)", opacity: "0.9"})
+})
+//paso 2 a paso 3
+$("#siguiente3").on("click", () => {
+    $("#formSimulador2").animate({left: '-1000px'});
+    $("#formSimulador3").animate({left: '100px'});
+    $('#progreso').width("360px")
+    $('.paso3').css({ filter: "invert(0) sepia(8) saturate(30) hue-rotate(260deg)" , opacity: "1"})
+})
+$("#anterior2").on("click", () => {
+    $("#formSimulador2").animate({left: '100px'});
+    $("#formSimulador3").animate({left: '1000px'});
+    $('#progreso').width("240px")
+    $('.paso3').css({ filter: "invert(0) sepia(1) saturate(0) hue-rotate(260deg)", opacity: "0.9"})
+})
+//paso 3 a paso 4
+$("#siguiente4").on("click", () => {
+    $("#formSimulador3").animate({left: '-1000px'});
+    $("#formSimulador4").animate({left: '100px'});
+    $('#progreso').width("500px")
+    $('.paso4').css({ filter: "invert(0) sepia(8) saturate(30) hue-rotate(260deg)" , opacity: "1"})
+})
+
+//
+
 //Array datosClientes - Class Clientes
 const datosClientes = [];
 
@@ -5,12 +56,15 @@ class Clientes {
 	constructor() {
 		this.client = {};
 	}
-	creacionClientes(nombre, apellido, email, monto, plazo, tasas, cuota) {
+	creacionClientes(nombre, apellido, email, empleo, antiguedad, sueldo, monto, plazo, tasas, cuota) {
 		this.client = {
 			id: Date.now(),
 			nombre: nombre,
 			apellido: apellido,
 			email: email,
+			empleo: empleo,
+			antiguedad: antiguedad,
+			sueldo: sueldo,
 			monto: monto,
 			plazo: plazo,
 			tasas: tasas,
@@ -65,35 +119,21 @@ const tasas = cambiarValorTasas();
 function cambiarValorTasas() {
 	let plazosOpc = $("#menuPlazos").prop("selectedIndex");
 	let opciones = $("#menuPlazos").prop("options");
-	if (opciones[plazosOpc].value == 12) {
-		$("#tasasSeleccion").html(3.95);
+    if (opciones[plazosOpc].value == "0") {
+		$("#tasasSeleccion").attr("placeholder", "TEM(Tasa Efectiva Mensual)").val("").focus().blur();
+	} else if(opciones[plazosOpc].value == 12) {
+		parseFloat($("#tasasSeleccion").attr("placeholder", 3.95));
 	} else if (opciones[plazosOpc].value == 24) {
-		$("#tasasSeleccion").html(4.19);
+		parseFloat($("#tasasSeleccion").attr("placeholder", 4.19));
 	} else if (opciones[plazosOpc].value == 36) {
-		$("#tasasSeleccion").html(4.36);
+		parseFloat($("#tasasSeleccion").attr("placeholder", 4.36));
 	}
-	return $("#tasasSeleccion").val();
+	parseFloat($("#tasasSeleccion").attr("placeholder"));
 }
+
 $(document).on("change", cambiarValorTasas);
 
-//visibilizar tabla y tasas
-var planesVisible = false;
-function mostrarTabla(nombre, visibilidad) {
-	let mostrar = document.getElementById(nombre);
-	if (visibilidad == false) {
-		if (mostrar.classList.contains("noMostrar")) {
-			mostrar.classList.remove("noMostrar");
-		}
-		mostrar.className += " mostrar";
-	} else {
-		if (mostrar.classList.contains("mostrar")) {
-			mostrar.classList.remove("mostrar");
-		}
-		mostrar.className += " noMostrar";
-	}
-}
-//generar PDF
-
+;
 
 
 //Sincronia Input Range/Input Valor Prestamo
@@ -106,13 +146,9 @@ $(document).on("change", "#aSolicitar", function (e) {
 	$("#inputRange").val($(this).val());
 });
 //Eventos boton Calc
-$("#botonCalc").on("click", (e) => {
+$(".botonCalc").on("click", (e) => {
 	e.preventDefault();
-	mostrarTabla("tasasSeleccion", planesVisible);
-	mostrarTabla("tasasLabel", planesVisible);
-	mostrarTabla("botonEnviar", planesVisible);
-	planesVisible = !planesVisible;
-	client.calcularCuotas($("#aSolicitar").val(), tasas, $("#menuPlazos").val());
+	client.calcularCuotas($("#aSolicitar").val(), parseFloat($("#tasasSeleccion").attr("placeholder")), $("#menuPlazos").val());
 });
 
 //Eventos boton enviar
@@ -122,11 +158,15 @@ $("#botonEnviar").on("click", (e) => {
 		$("#nombre").val(),
 		$("#apellido").val(),
 		$("#mail").val(),
+		$("#empleo").val(),
+		$("#antiguedad").val(),
+		$("#sueldo").val(),
 		parseInt($("#aSolicitar").val()),
 		parseInt($("#menuPlazos").val()),
-		parseFloat(tasas),
+		parseFloat($("#tasasSeleccion").attr("placeholder")),
 		parseFloat($(".valorCuota").text()).toFixed(2)
 	);
+
     function generatePdf() {
         var doc = new jspdf.jsPDF();
         var offsetY = 4.797777777777778;
