@@ -168,7 +168,7 @@ $.validator.addMethod(
 //paso 4 a 5
 $('#paso-4').validate({
 	rules: {
-		monto: { required: true, minlength: 5, maxlength: 6, min: 1 },
+		monto: { required: true, minlength: 5, maxlength: 6, min: 1, max: 999999 },
 		menuPlazos: { required: true, valorNoIgual: 'default' },
 	},
 	messages: {

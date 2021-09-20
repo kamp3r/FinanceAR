@@ -268,7 +268,7 @@ html {
 }
 
 #contenedorSimulador {
-	background-image: url(../images/background-form1.svg);
+	background-image: url(../images/background-form.svg);
 	min-height: 100vh;
 	background-repeat: no-repeat;
 	background-position: bottom;

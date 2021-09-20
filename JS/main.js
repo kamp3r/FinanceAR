@@ -34,6 +34,12 @@ class Clientes {
 		datosClientes.push(this.client);
 	}
 	calcularCuotas(monto, tasas, plazos) {
+
+		//condicion para que borre las tablas que estan ocultas y no se amontonen
+		if ($('table, tbody, tr')) {
+			$('#tablaBody tr').empty();
+		}
+
 		let hoy = new Date();
 		let pagoMensual = 0;
 		let pagoAmortizacion = 0;
@@ -41,10 +47,6 @@ class Clientes {
 		pagoMensual =
 			(monto * ((Math.pow(1 + tasas / 100, plazos) * tasas) / 100)) /
 			(Math.pow(1 + tasas / 100, plazos) - 1);
-		while (datosTabla.firstChild) {
-			datosTabla.removeChild(datosTabla.firstChild);
-		}
-
 		//creacion de fechas sucesivas
 		function formatoFecha(fecha) {
 			fecha = new Date(fecha);

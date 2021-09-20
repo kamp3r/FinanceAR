@@ -114,7 +114,7 @@
                       Bienvenido a nuestro simulador de prestamos! Si te interesa obtener
                       uno, llena el siguiente formulario y descubri que oferta tenemos para vos.
                   </p>
-                  <button id="siguiente1" data-paso="1" data-al_paso="2" class="siguienteButton" type="button">Siguiente</button>
+                  <button id="siguiente1" class="siguienteButton" type="button">Siguiente</button>
                 </form>
             
                 <form class="paso" id="paso-2">
@@ -124,8 +124,8 @@
                     <input id="apellido" class="" type="text" name="apellido" required placeholder="Apellido">
                     <input id="mail" class="" type="email" name="mail" required placeholder="Email" >
                   </div>
-                  <button id="anterior0" data-paso="2" data-al_paso="1"  class="anteriorButton" type="button">Anterior</button>
-                  <button id="siguiente2" data-paso="2" data-al_paso="3" class="siguienteButton" type="button">Siguiente</button>
+                  <button id="anterior0" class="anteriorButton" type="button">Anterior</button>
+                  <button id="siguiente2" class="siguienteButton" type="button">Siguiente</button>
                 </form>   
             
                 <form class="paso" id="paso-3">
@@ -135,14 +135,14 @@
                     <input type="number" id="antiguedad" name="antiguedad" class="" placeholder="Antigüedad laboral (en meses)" required>
                     <input type="number" id="sueldo" name="sueldo" class="" placeholder="Sueldo neto del ultimo mes" required>
                   </div>  
-                  <button id="anterior1" class="anteriorButton" data-paso="3" data-al_paso="2"  type="button">Anterior</button>
-                  <button id="siguiente3" class="siguienteButton" data-paso="3" data-al_paso="4"  type="button">Siguiente</button>
+                  <button id="anterior1" class="anteriorButton" type="button">Anterior</button>
+                  <button id="siguiente3" class="siguienteButton" type="button">Siguiente</button>
                 </form>
             
                 <form class="paso" id="paso-4">
                   <h3>Solicitud de Prestamo</h3>
                   <div class="contenedorInputs">
-                    <input type="number" id="aSolicitar" name="monto" class="" max="200000" placeholder="Monto a Solicitar" required>
+                    <input type="number" id="aSolicitar" name="monto" class="" placeholder="Monto a Solicitar" required>
                     <select name="menuPlazos" id="menuPlazos" class="inputsValues" required>
                         <option value="default">Elegi una Opcion</option>
                         <option type="number" value="12">12 meses</option>
@@ -173,7 +173,7 @@
                         <th>Monto deudor</th>
                     </tr>
                 </thead>
-                <tbody id="tablaBody noMostrar">
+                <tbody id="tablaBody">
     
                 </tbody>
             </table>
