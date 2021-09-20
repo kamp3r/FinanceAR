@@ -30,13 +30,27 @@ html {
     list-style: none;
     font-size: 2rem;
     text-align: center;
-    justify-content: center; }
+    justify-content: space-around;
+    padding: 0.7rem;
+    text-decoration: none; }
     .navigation .navigationContainer .linkItem {
-      width: 30rem;
-      padding: 3rem;
+      margin: 0 auto;
       color: #2f0e30;
       font-weight: bolder;
       text-decoration: none; }
+      .navigation .navigationContainer .linkItem:hover {
+        color: #b70bc7; }
+      .navigation .navigationContainer .linkItem::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 2px;
+        background: #b70bc7;
+        transition: width 0.3s; }
+      .navigation .navigationContainer .linkItem:hover::after {
+        margin: 0 auto;
+        width: 100%;
+        transition: width 0.3s; }
     .navigation .navigationContainer .menuCerrado {
       font-size: 2rem;
       display: none;
@@ -365,7 +379,7 @@ html {
     .navigation .navigationContainer {
       padding: 0;
       width: 100%;
-      justify-content: center;
+      justify-content: space-around;
       align-items: center; }
       .navigation .navigationContainer .linkItem {
         width: 100%;

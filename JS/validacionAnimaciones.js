@@ -1,3 +1,16 @@
+//funciones menu hamburguesa
+function mostrarMenu(){
+	$('.navigationContainer').css({display: "flex"})
+	$('.navigationContainer').css({top: "0"})
+}
+function cerrarMenu(){
+	$('.navigationContainer').css({top: "-110%"})
+}
+
+$('.menuAbierto').on('click', mostrarMenu)
+$('.menuCerrado').on('click', cerrarMenu)
+$('.linkItem').on('click', cerrarMenu)
+
 //Scroll
 function animarLinks (link, haciaDonde){
 	link.click(function (e){
@@ -56,35 +69,39 @@ nextBackFormulario($("#anterior1"), $('#paso-2'),$("#paso-3"),"25%",$('.paso2'),
 //paso 3 a paso 4
 $("#paso-3").validate({
 	rules: {
-		empleo: { required: true, minlength: 2},
-		antiguedad: { required: true, number: true, minlength: 1},
-		sueldo: { required:true, number: true, minlength: 5},
+		empleo: { required: true, minlength: 4},
+		antiguedad: { required: true, number: true, digits:true, minlength: 1, min: 1},
+		sueldo: { required:true, number: true, minlength: 5, min: 1},
 	},
 	messages: {
 		empleo: "El campo es obligatorio.",
-		antiguedad: "El campo es obligatorio.",
+		antiguedad: "Ingresa un valor correcto, por encima de 1",
 		sueldo: "Coloca un valor valido, por encima de los 10000 pesos",
 	}
 });
 formulariosValidados($("#siguiente3"), $('#paso-3'), $("#paso-4"),"75%",$('.paso3'),"invert(0) sepia(8) saturate(30) hue-rotate(260deg)","1")
 nextBackFormulario($("#anterior2"), $('#paso-3'), $("#paso-4"),"50%",$('.paso3'),"invert(0) sepia(8) saturate(0) hue-rotate(260deg)","0.9")
 
-//paso 4 a 5
+//meotodo validador para el Select
 $.validator.addMethod("valorNoIgual", function(value, element, arg){
 	return arg !== value;
    }, "Valor debe ser diferente al default.");
+
+//paso 4 a 5
 $("#paso-4").validate({
 	rules: {
-		monto: { required: true, minlength: 5},
+		monto: { required: true, minlength: 5, maxlength: 6, min: 1},
 		menuPlazos: { required: true, valorNoIgual: "default"},
 	},
 	messages: {
-		monto: "El campo es obligatorio. Recorda que aprobamos prestamos hasta 500000",
-		menuPlazos: {valorNoIgual: "El campo es obligatorio."}
+		monto: "El campo es obligatorio. Recorda que aprobamos prestamos hasta $999.999 pesos",
+		menuPlazos: {valorNoIgual: "Debes elegir una opcion del menu"}
 	}
 });
 formulariosValidados($("#siguiente4"), $('#paso-4'), $("#paso-5"),"100%",$('.paso4'),"invert(0) sepia(8) saturate(30) hue-rotate(260deg)","1");
 
+
+//finalizar el formulario y retornar a primer estadio
 $('#botonEnviar').on('click', () =>{
 	$('#paso-1').toggleClass('animacionIzq active')
 	$('#paso-2').toggleClass('animacionIzq')
@@ -99,14 +116,3 @@ $('#botonEnviar').on('click', () =>{
 }
 )
 
-function mostrarMenu(){
-	$('.navigationContainer').css({display: "flex"})
-	$('.navigationContainer').css({top: "0"})
-}
-function cerrarMenu(){
-	$('.navigationContainer').css({top: "-110%"})
-}
-
-$('.menuAbierto').on('click', mostrarMenu)
-$('.menuCerrado').on('click', cerrarMenu)
-$('.linkItem').on('click', cerrarMenu)
