@@ -1,6 +1,6 @@
 html {
   font-size: 62.5%;
-  font-family: 'Poppins', sans-serif; }
+  font-family: "Poppins", sans-serif; }
 
 * {
   margin: 0;
@@ -120,21 +120,20 @@ html {
         background: -webkit-linear-gradient(#ffffff, #af32af);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent; }
-    #inicio article button {
-      margin: 2rem;
-      background-color: #e043e0;
-      width: 24rem;
-      height: 9rem;
-      border-style: none;
-      border-radius: 10rem; }
-      #inicio article button a {
-        background: -webkit-linear-gradient(#ffffff, #f7d9d9);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        text-decoration: none;
+    #inicio article a {
+      text-decoration: none; }
+      #inicio article a button {
+        margin: 2rem;
+        background-color: #e043e0;
+        width: 24rem;
+        height: 9rem;
+        border-style: none;
+        border-radius: 10rem;
+        color: #fafafa;
         font-family: "Poppins", sans-serif;
         font-weight: bold;
-        font-size: 2.4rem; }
+        font-size: 2.4rem;
+        cursor: pointer; }
   #inicio .contenedorInicioImagen {
     width: 50%;
     text-align: center; }
