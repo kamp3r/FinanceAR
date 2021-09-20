@@ -1,665 +1,825 @@
 html {
-  font-size: 62.5%;
-  font-family: "Poppins", sans-serif; }
+	font-size: 62.5%;
+	font-family: "Poppins", sans-serif;
+}
 
 * {
-  margin: 0;
-  box-sizing: border-box; }
+	margin: 0;
+	box-sizing: border-box;
+}
 
 .navigation {
-  background: #ffffff;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
-  max-height: 50%;
-  color: #000;
-  border-bottom: 0.2px solid #000; }
-  .navigation .linkLogo .logoFinan {
-    height: 20rem;
-    max-width: 100%;
-    object-fit: scale-down; }
-  .navigation .menuAbierto {
-    font-size: 4rem;
-    margin: 2rem;
-    display: none;
-    cursor: pointer; }
-  .navigation .navigationContainer {
-    width: 80%;
-    display: flex;
-    list-style: none;
-    font-size: 2rem;
-    text-align: center;
-    justify-content: space-around;
-    padding: 0.7rem;
-    text-decoration: none; }
-    .navigation .navigationContainer .linkItem {
-      margin: 0 auto;
-      color: #2f0e30;
-      font-weight: bolder;
-      text-decoration: none; }
-      .navigation .navigationContainer .linkItem:hover {
-        color: #b70bc7; }
-      .navigation .navigationContainer .linkItem::after {
-        content: "";
-        display: block;
-        width: 0;
-        height: 2px;
-        background: #b70bc7;
-        transition: width 0.3s; }
-      .navigation .navigationContainer .linkItem:hover::after {
-        margin: 0 auto;
-        width: 100%;
-        transition: width 0.3s; }
-    .navigation .navigationContainer .menuCerrado {
-      font-size: 2rem;
-      display: none;
-      cursor: pointer; }
-  .navigation .navigationButtons {
-    display: flex;
-    justify-content: space-around; }
-    .navigation .navigationButtons button {
-      background: linear-gradient(174.48deg, #36419F -12.41%, #9632E4 91.04%);
-      border-radius: 4rem;
-      padding: 1rem 2rem;
-      margin-left: 2rem;
-      border: none;
-      width: 15rem;
-      height: 5rem; }
-      .navigation .navigationButtons button a {
-        font-weight: bolder;
-        font-size: 1.4rem;
-        text-decoration: none;
-        color: #fff; }
+	background: #ffffff;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	max-height: 50%;
+	color: #000;
+	border-bottom: 0.2px solid #000;
+}
+.navigation .linkLogo .logoFinan {
+	height: 20rem;
+	max-width: 100%;
+	object-fit: scale-down;
+}
+.navigation .menuAbierto {
+	font-size: 4rem;
+	margin: 2rem;
+	display: none;
+	cursor: pointer;
+}
+.navigation .navigationContainer {
+	width: 80%;
+	display: flex;
+	list-style: none;
+	font-size: 2rem;
+	text-align: center;
+	justify-content: space-around;
+	padding: 0.7rem;
+	text-decoration: none;
+}
+.navigation .navigationContainer .linkItem {
+	margin: 0 auto;
+	color: #2f0e30;
+	font-weight: bolder;
+	text-decoration: none;
+}
+.navigation .navigationContainer .linkItem:hover {
+	color: #b70bc7;
+}
+.navigation .navigationContainer .linkItem::after {
+	content: "";
+	display: block;
+	width: 0;
+	height: 2px;
+	background: #b70bc7;
+	transition: width 0.3s;
+}
+.navigation .navigationContainer .linkItem:hover::after {
+	margin: 0 auto;
+	width: 100%;
+	transition: width 0.3s;
+}
+.navigation .navigationContainer .menuCerrado {
+	font-size: 2rem;
+	display: none;
+	cursor: pointer;
+}
+.navigation .navigationButtons {
+	display: flex;
+	justify-content: space-around;
+}
+.navigation .navigationButtons button {
+	background: linear-gradient(174.48deg, #36419f -12.41%, #9632e4 91.04%);
+	border-radius: 4rem;
+	padding: 1rem 2rem;
+	margin-left: 2rem;
+	border: none;
+	width: 15rem;
+	height: 5rem;
+}
+.navigation .navigationButtons button a {
+	font-weight: bolder;
+	font-size: 1.4rem;
+	text-decoration: none;
+	color: #fff;
+}
 
 .footer {
-  width: 100%;
-  background-color: #000; }
-  .footer .footerElements {
-    list-style: none;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-    .footer .footerElements img {
-      margin: 4rem;
-      width: 5rem; }
-  .footer div {
-    display: flex;
-    justify-content: center;
-    width: 100%; }
-    .footer div .footerText {
-      color: #fff;
-      font-size: 2.5rem; }
+	width: 100%;
+	background-color: #000;
+}
+.footer .footerElements {
+	list-style: none;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.footer .footerElements img {
+	margin: 4rem;
+	width: 5rem;
+}
+.footer div {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+.footer div .footerText {
+	color: #fff;
+	font-size: 2.5rem;
+}
 
 #inicio {
-  background-image: url(../images/svgBg1.svg);
-  width: 100%;
-  height: 100rem;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-wrap: wrap; }
-  #inicio article {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    height: 50%;
-    align-items: center;
-    text-align: center; }
-    #inicio article h2 {
-      color: white;
-      font-size: 7rem;
-      font-weight: 300;
-      width: 100%; }
-      #inicio article h2 span {
-        font-weight: bold;
-        background: -webkit-linear-gradient(#ffffff, #af32af);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent; }
-    #inicio article a {
-      text-decoration: none; }
-      #inicio article a button {
-        margin: 2rem;
-        background-color: #e043e0;
-        width: 24rem;
-        height: 9rem;
-        border-style: none;
-        border-radius: 10rem;
-        color: #fafafa;
-        font-family: "Poppins", sans-serif;
-        font-weight: bold;
-        font-size: 2.4rem;
-        cursor: pointer; }
-  #inicio .contenedorInicioImagen {
-    width: 50%;
-    text-align: center; }
-    #inicio .contenedorInicioImagen img {
-      width: 50%;
-      filter: brightness(120%);
-      filter: contrast(150%); }
+	background-image: url(../images/svgBg1.svg);
+	width: 100%;
+	height: 100rem;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-wrap: wrap;
+}
+#inicio article {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	height: 50%;
+	align-items: center;
+	text-align: center;
+}
+#inicio article h2 {
+	color: white;
+	font-size: 7rem;
+	font-weight: 300;
+	width: 100%;
+}
+#inicio article h2 span {
+	font-weight: bold;
+	background: -webkit-linear-gradient(#ffffff, #af32af);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+#inicio article a {
+	text-decoration: none;
+}
+#inicio article a button {
+	margin: 2rem;
+	background-color: #e043e0;
+	width: 24rem;
+	height: 9rem;
+	border-style: none;
+	border-radius: 10rem;
+	color: #fafafa;
+	font-family: "Poppins", sans-serif;
+	font-weight: bold;
+	font-size: 2.4rem;
+	cursor: pointer;
+}
+#inicio .contenedorInicioImagen {
+	width: 50%;
+	text-align: center;
+}
+#inicio .contenedorInicioImagen img {
+	width: 50%;
+	filter: brightness(120%);
+	filter: contrast(150%);
+}
 
 #confiarEn {
-  background-image: url(../images/bgQuienes.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-  margin-bottom: 20rem; }
-  #confiarEn h2 {
-    text-align: center;
-    font-size: 6rem;
-    background: -webkit-linear-gradient(#3a2697, #d32dd3);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; }
-  #confiarEn .contenedorConfiar {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: center; }
-    #confiarEn .contenedorConfiar .cardConfiar {
-      margin: 2rem;
-      padding: 2rem;
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      align-items: center;
-      justify-content: center;
-      background: #ffffff;
-      box-shadow: 0 8px 16px 0 rgba(83, 35, 160, 0.404);
-      width: 30%;
-      height: 70rem;
-      border-radius: 4rem; }
-      #confiarEn .contenedorConfiar .cardConfiar img {
-        width: 80%;
-        border-radius: 2rem; }
-      #confiarEn .contenedorConfiar .cardConfiar h3 {
-        font-size: 4rem;
-        color: #000; }
-      #confiarEn .contenedorConfiar .cardConfiar p {
-        font-size: 2rem;
-        color: #000; }
+	background-image: url(../images/bgQuienes.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	margin-bottom: 20rem;
+}
+#confiarEn h2 {
+	text-align: center;
+	font-size: 6rem;
+	background: -webkit-linear-gradient(#3a2697, #d32dd3);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+#confiarEn .contenedorConfiar {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+}
+#confiarEn .contenedorConfiar .cardConfiar {
+	margin: 2rem;
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	background: #ffffff;
+	box-shadow: 0 8px 16px 0 rgba(83, 35, 160, 0.404);
+	width: 30%;
+	height: 70rem;
+	border-radius: 4rem;
+}
+#confiarEn .contenedorConfiar .cardConfiar img {
+	width: 80%;
+	border-radius: 2rem;
+}
+#confiarEn .contenedorConfiar .cardConfiar h3 {
+	font-size: 4rem;
+	color: #000;
+}
+#confiarEn .contenedorConfiar .cardConfiar p {
+	font-size: 2rem;
+	color: #000;
+}
 
 #servicios {
-  background-image: url(../images/backgroundCards.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: 100%;
-  height: 100%; }
-  #servicios h2 {
-    text-align: center;
-    font-size: 6rem;
-    background: -webkit-linear-gradient(#3a2697, #d32dd3);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; }
-  #servicios .contenedorCardsServicios {
-    display: flex;
-    width: 100%;
-    height: 100rem;
-    align-items: center;
-    justify-content: center; }
-    #servicios .contenedorCardsServicios .cardServicios {
-      margin: 2rem;
-      padding: 2rem;
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      align-items: center;
-      justify-content: center;
-      background: #ffffff;
-      box-shadow: 0 8px 16px 0 rgba(83, 35, 160, 0.404);
-      width: 30%;
-      height: 60rem;
-      border-radius: 4rem; }
-      #servicios .contenedorCardsServicios .cardServicios img {
-        width: 40%;
-        border-radius: 2rem; }
-      #servicios .contenedorCardsServicios .cardServicios h3 {
-        font-size: 3rem;
-        color: #000;
-        margin: 4rem; }
-      #servicios .contenedorCardsServicios .cardServicios p {
-        font-size: 1.8rem;
-        color: #000; }
+	background-image: url(../images/backgroundCards.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+}
+#servicios h2 {
+	text-align: center;
+	font-size: 6rem;
+	background: -webkit-linear-gradient(#3a2697, #d32dd3);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+#servicios .contenedorCardsServicios {
+	display: flex;
+	width: 100%;
+	height: 100rem;
+	align-items: center;
+	justify-content: center;
+}
+#servicios .contenedorCardsServicios .cardServicios {
+	margin: 2rem;
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	background: #ffffff;
+	box-shadow: 0 8px 16px 0 rgba(83, 35, 160, 0.404);
+	width: 30%;
+	height: 60rem;
+	border-radius: 4rem;
+}
+#servicios .contenedorCardsServicios .cardServicios img {
+	width: 40%;
+	border-radius: 2rem;
+}
+#servicios .contenedorCardsServicios .cardServicios h3 {
+	font-size: 3rem;
+	color: #000;
+	margin: 4rem;
+}
+#servicios .contenedorCardsServicios .cardServicios p {
+	font-size: 1.8rem;
+	color: #000;
+}
 
 #contenedorSimulador {
-  background-image: url(../images/background-form1.svg);
-  min-height: 100vh;
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  align-items: center; }
-  #contenedorSimulador h2 {
-    text-align: center;
-    background: -webkit-linear-gradient(#3a2697, #d32dd3);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 6rem;
-    padding: 7rem; }
-  #contenedorSimulador .contenedorForm {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 100%; }
-    #contenedorSimulador .contenedorForm .flecha-pasos {
-      border-top-right-radius: 19rem;
-      border-bottom-right-radius: 19rem;
-      width: 25%;
-      height: 5.8rem;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      box-shadow: 0 -1px 5px -1px #000;
-      background-color: #000;
-      position: relative; }
-      #contenedorSimulador .contenedorForm .flecha-pasos .pasos-flecha {
-        font-size: 1rem;
-        width: 100%;
-        text-align: center;
-        color: #c5b1b1;
-        position: relative; }
-        #contenedorSimulador .contenedorForm .flecha-pasos .pasos-flecha .paso1, #contenedorSimulador .contenedorForm .flecha-pasos .pasos-flecha .paso2, #contenedorSimulador .contenedorForm .flecha-pasos .pasos-flecha .paso3, #contenedorSimulador .contenedorForm .flecha-pasos .pasos-flecha .paso4 {
-          transition: .2s ease-in-out; }
-      #contenedorSimulador .contenedorForm .flecha-pasos #progreso {
-        position: absolute;
-        height: 100%;
-        width: 10px;
-        background: linear-gradient(to right, #36419F -12.41%, #9632E4 91.04%);
-        transition: 1s;
-        border-top-right-radius: 19rem;
-        border-bottom-right-radius: 19rem; }
-    #contenedorSimulador .contenedorForm #formSimulador {
-      display: flex;
-      font-family: 'Poppins', sans-serif;
-      padding: 2rem;
-      width: 30%;
-      height: 70rem;
-      overflow: hidden;
-      margin: 5rem;
-      justify-content: flex-start; }
-      #contenedorSimulador .contenedorForm #formSimulador .animacionIzq {
-        margin-left: -100%; }
-      #contenedorSimulador .contenedorForm #formSimulador .error {
-        color: #ffffffb4;
-        font-size: 1.5rem; }
-      #contenedorSimulador .contenedorForm #formSimulador .paso {
-        display: block;
-        text-align: center;
-        align-items: center;
-        min-width: 100%;
-        background-color: #ab42d4de;
-        border: none;
-        border-radius: 1.5rem;
-        transition: all 1s;
-        opacity: 0; }
-        #contenedorSimulador .contenedorForm #formSimulador .paso h3 {
-          text-align: center;
-          font-size: 3.5rem;
-          background: -webkit-linear-gradient(#f1f3f7, #f8a1f4);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          width: 100%;
-          padding: 2rem; }
-        #contenedorSimulador .contenedorForm #formSimulador .paso p {
-          margin: 8rem auto;
-          font-size: 1.5rem;
-          text-align: center;
-          color: #fafafa;
-          padding: 3rem; }
-        #contenedorSimulador .contenedorForm #formSimulador .paso .contenedorInputs {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          margin: 5rem 0; }
-          #contenedorSimulador .contenedorForm #formSimulador .paso .contenedorInputs input {
-            width: 80%;
-            padding: 2rem 0.5rem;
-            margin: 1rem 0;
-            border: 0;
-            border-bottom: 1px solid #dbcef1;
-            outline: none;
-            background: transparent;
-            color: #ffffff;
-            -webkit-appearance: none; }
-          #contenedorSimulador .contenedorForm #formSimulador .paso .contenedorInputs input[type="number"] {
-            margin: 2rem 0;
-            -moz-appearance: textfield !important; }
-          #contenedorSimulador .contenedorForm #formSimulador .paso .contenedorInputs #menuPlazos {
-            display: block;
-            max-width: 80%;
-            min-width: 180px;
-            margin: 2rem auto;
-            border-bottom: 1px solid #dbcef1;
-            background-color: #bd6bf3; }
-          #contenedorSimulador .contenedorForm #formSimulador .paso .contenedorInputs select {
-            border: none;
-            outline: none;
-            background: transparent;
-            border-radius: 0;
-            margin: 0;
-            display: block;
-            width: 100%;
-            padding: 1rem;
-            font-size: 1.2rem;
-            color: #ffffff; }
-          #contenedorSimulador .contenedorForm #formSimulador .paso .contenedorInputs ::placeholder {
-            color: #ffffff;
-            font-family: 'Poppins', sans-serif; }
-        #contenedorSimulador .contenedorForm #formSimulador .paso button {
-          display: inline;
-          width: 20rem;
-          height: 4rem;
-          font-size: 1.8rem;
-          font-weight: bold;
-          margin: 2rem 1rem;
-          background: linear-gradient(to right, #36419F -12.41%, #b063eb 91.04%);
-          color: #fafafa;
-          border: none;
-          outline: none;
-          cursor: pointer;
-          border-radius: 2rem; }
-        #contenedorSimulador .contenedorForm #formSimulador .paso #botonEnviar {
-          width: 25rem; }
-      #contenedorSimulador .contenedorForm #formSimulador .active {
-        opacity: 1; }
+	background-image: url(../images/background-form1.svg);
+	min-height: 100vh;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+#contenedorSimulador h2 {
+	text-align: center;
+	background: -webkit-linear-gradient(#3a2697, #d32dd3);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-size: 6rem;
+	padding: 7rem;
+}
+#contenedorSimulador .contenedorForm {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 100%;
+}
+#contenedorSimulador .contenedorForm .flecha-pasos {
+	border-top-right-radius: 19rem;
+	border-bottom-right-radius: 19rem;
+	width: 25%;
+	height: 5.8rem;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	box-shadow: 0 -1px 5px -1px #000;
+	background-color: #000;
+	position: relative;
+}
+#contenedorSimulador .contenedorForm .flecha-pasos .pasos-flecha {
+	font-size: 1rem;
+	width: 100%;
+	text-align: center;
+	color: #c5b1b1;
+	position: relative;
+}
+#contenedorSimulador .contenedorForm .flecha-pasos .pasos-flecha .paso1,
+#contenedorSimulador .contenedorForm .flecha-pasos .pasos-flecha .paso2,
+#contenedorSimulador .contenedorForm .flecha-pasos .pasos-flecha .paso3,
+#contenedorSimulador .contenedorForm .flecha-pasos .pasos-flecha .paso4 {
+	transition: 0.2s ease-in-out;
+}
+#contenedorSimulador .contenedorForm .flecha-pasos #progreso {
+	position: absolute;
+	height: 100%;
+	width: 10px;
+	background: linear-gradient(to right, #36419f -12.41%, #9632e4 91.04%);
+	transition: 1s;
+	border-top-right-radius: 19rem;
+	border-bottom-right-radius: 19rem;
+}
+#contenedorSimulador .contenedorForm #formSimulador {
+	display: flex;
+	font-family: "Poppins", sans-serif;
+	padding: 2rem;
+	width: 30%;
+	height: 70rem;
+	overflow: hidden;
+	margin: 5rem;
+	justify-content: flex-start;
+}
+#contenedorSimulador .contenedorForm #formSimulador .animacionIzq {
+	margin-left: -100%;
+}
+#contenedorSimulador .contenedorForm #formSimulador .error {
+	color: #ffffffb4;
+	font-size: 1.5rem;
+}
+#contenedorSimulador .contenedorForm #formSimulador .paso {
+	display: block;
+	text-align: center;
+	align-items: center;
+	min-width: 100%;
+	background-color: #ab42d4de;
+	border: none;
+	border-radius: 1.5rem;
+	transition: all 1s;
+	opacity: 0;
+}
+#contenedorSimulador .contenedorForm #formSimulador .paso h3 {
+	text-align: center;
+	font-size: 3.5rem;
+	background: -webkit-linear-gradient(#f1f3f7, #f8a1f4);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	width: 100%;
+	padding: 2rem;
+}
+#contenedorSimulador .contenedorForm #formSimulador .paso p {
+	margin: 8rem auto;
+	font-size: 1.5rem;
+	text-align: center;
+	color: #fafafa;
+	padding: 3rem;
+}
+#contenedorSimulador .contenedorForm #formSimulador .paso .contenedorInputs {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 5rem 0;
+}
+#contenedorSimulador
+	.contenedorForm
+	#formSimulador
+	.paso
+	.contenedorInputs
+	input {
+	width: 80%;
+	padding: 2rem 0.5rem;
+	margin: 1rem 0;
+	border: 0;
+	border-bottom: 1px solid #dbcef1;
+	outline: none;
+	background: transparent;
+	color: #ffffff;
+	-webkit-appearance: none;
+}
+#contenedorSimulador
+	.contenedorForm
+	#formSimulador
+	.paso
+	.contenedorInputs
+	input[type="number"] {
+	margin: 2rem 0;
+	-moz-appearance: textfield !important;
+}
+#contenedorSimulador
+	.contenedorForm
+	#formSimulador
+	.paso
+	.contenedorInputs
+	#menuPlazos {
+	display: block;
+	max-width: 80%;
+	min-width: 180px;
+	margin: 2rem auto;
+	border-bottom: 1px solid #dbcef1;
+	background-color: #bd6bf3;
+}
+#contenedorSimulador
+	.contenedorForm
+	#formSimulador
+	.paso
+	.contenedorInputs
+	select {
+	border: none;
+	outline: none;
+	background: transparent;
+	border-radius: 0;
+	margin: 0;
+	display: block;
+	width: 100%;
+	padding: 1rem;
+	font-size: 1.2rem;
+	color: #ffffff;
+}
+#contenedorSimulador
+	.contenedorForm
+	#formSimulador
+	.paso
+	.contenedorInputs
+	::placeholder {
+	color: #ffffff;
+	font-family: "Poppins", sans-serif;
+}
+#contenedorSimulador .contenedorForm #formSimulador .paso button {
+	display: inline;
+	width: 20rem;
+	height: 4rem;
+	font-size: 1.8rem;
+	font-weight: bold;
+	margin: 2rem 1rem;
+	background: linear-gradient(to right, #36419f -12.41%, #b063eb 91.04%);
+	color: #fafafa;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	border-radius: 2rem;
+}
+#contenedorSimulador .contenedorForm #formSimulador .paso #botonEnviar {
+	width: 25rem;
+}
+#contenedorSimulador .contenedorForm #formSimulador .active {
+	opacity: 1;
+}
 
 .contenedorTabla {
-  display: none; }
+	display: none;
+}
 
 @media screen and (max-width: 1200px) {
-  .navigation {
-    flex-direction: column; }
-    .navigation .navigationContainer {
-      padding: 0;
-      width: 100%;
-      justify-content: space-around;
-      align-items: center; }
-      .navigation .navigationContainer .linkItem {
-        width: 100%;
-        font-size: 1.8rem; }
-    .navigation .navigationButtons {
-      margin: 2rem; }
-      .navigation .navigationButtons button {
-        height: 4rem;
-        width: 16rem; }
-  #inicio {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-bottom: 12rem; }
-    #inicio article {
-      background-color: #8734d9;
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      height: 30rem;
-      align-items: center;
-      text-align: center;
-      border-bottom-right-radius: 8rem;
-      border-bottom-left-radius: 8rem; }
-      #inicio article h2 {
-        font-size: 4rem; }
-    #inicio .contenedorInicioImagen {
-      background-color: #8734d9;
-      width: 65%;
-      text-align: center; }
-      #inicio .contenedorInicioImagen img {
-        width: 100%;
-        filter: brightness(120%);
-        filter: contrast(150%); }
-  #confiarEn h2 {
-    margin: 5rem; }
-  #confiarEn .contenedorConfiar {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%; }
-    #confiarEn .contenedorConfiar .cardConfiar {
-      margin: 1rem;
-      padding: 2rem;
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      align-items: center;
-      justify-content: center;
-      background: #ffffff;
-      box-shadow: 0 8px 16px 0 rgba(83, 35, 160, 0.404);
-      width: 80%;
-      height: 60rem;
-      border-radius: 4rem; }
-      #confiarEn .contenedorConfiar .cardConfiar img {
-        width: 45%;
-        border-radius: 2rem; }
-      #confiarEn .contenedorConfiar .cardConfiar h3 {
-        font-size: 4rem;
-        color: #000; }
-      #confiarEn .contenedorConfiar .cardConfiar p {
-        font-size: 2rem;
-        color: #000; }
-  #servicios h2 {
-    text-align: center;
-    font-size: 6rem;
-    background: -webkit-linear-gradient(#3a2697, #d32dd3);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; }
-  #servicios .contenedorCardsServicios {
-    display: flex;
-    flex-direction: column;
-    height: 100%; }
-    #servicios .contenedorCardsServicios .cardServicios {
-      height: 65rem;
-      margin: 3rem;
-      width: 80%; }
-  #contenedorSimulador .contenedorForm .flecha-pasos {
-    width: 90%; }
-  #contenedorSimulador .contenedorForm #formSimulador {
-    display: flex;
-    font-family: 'Poppins', sans-serif;
-    padding: 2rem;
-    height: 100%;
-    width: 90%;
-    overflow: hidden;
-    margin: 5rem;
-    justify-content: flex-start; }
-    #contenedorSimulador .contenedorForm #formSimulador .animacionIzq {
-      margin-left: -100%; }
-    #contenedorSimulador .contenedorForm #formSimulador .error {
-      color: #ffffffb4;
-      font-size: 1.5rem; }
-    #contenedorSimulador .contenedorForm #formSimulador .paso {
-      display: block;
-      text-align: center;
-      align-items: center;
-      width: 90%;
-      background-color: #ab42d4de;
-      border: none;
-      border-radius: 1.5rem;
-      transition: all 1s;
-      opacity: 0; }
-    #contenedorSimulador .contenedorForm #formSimulador .active {
-      opacity: 1; }
-  .footer {
-    width: 100%;
-    background-color: #000; }
-    .footer .footerElements {
-      list-style: none;
-      padding: 0;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center; }
-      .footer .footerElements img {
-        margin: 1rem;
-        width: 5rem; } }
+	.navigation {
+		flex-direction: column;
+	}
+	.navigation .navigationContainer {
+		padding: 0;
+		width: 100%;
+		justify-content: space-around;
+		align-items: center;
+	}
+	.navigation .navigationContainer .linkItem {
+		width: 100%;
+		font-size: 1.8rem;
+	}
+	.navigation .navigationButtons {
+		margin: 2rem;
+	}
+	.navigation .navigationButtons button {
+		height: 4rem;
+		width: 16rem;
+	}
+	#inicio {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column-reverse;
+		align-items: center;
+		flex-wrap: wrap;
+		margin-bottom: 12rem;
+	}
+	#inicio article {
+		background-color: #8734d9;
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		height: 30rem;
+		align-items: center;
+		text-align: center;
+		border-bottom-right-radius: 8rem;
+		border-bottom-left-radius: 8rem;
+	}
+	#inicio article h2 {
+		font-size: 4rem;
+	}
+	#inicio .contenedorInicioImagen {
+		background-color: #8734d9;
+		width: 65%;
+		text-align: center;
+	}
+	#inicio .contenedorInicioImagen img {
+		width: 100%;
+		filter: brightness(120%);
+		filter: contrast(150%);
+	}
+	#confiarEn h2 {
+		margin: 5rem;
+	}
+	#confiarEn .contenedorConfiar {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		height: 100%;
+	}
+	#confiarEn .contenedorConfiar .cardConfiar {
+		margin: 1rem;
+		padding: 2rem;
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		align-items: center;
+		justify-content: center;
+		background: #ffffff;
+		box-shadow: 0 8px 16px 0 rgba(83, 35, 160, 0.404);
+		width: 80%;
+		height: 60rem;
+		border-radius: 4rem;
+	}
+	#confiarEn .contenedorConfiar .cardConfiar img {
+		width: 45%;
+		border-radius: 2rem;
+	}
+	#confiarEn .contenedorConfiar .cardConfiar h3 {
+		font-size: 4rem;
+		color: #000;
+	}
+	#confiarEn .contenedorConfiar .cardConfiar p {
+		font-size: 2rem;
+		color: #000;
+	}
+	#servicios h2 {
+		text-align: center;
+		font-size: 6rem;
+		background: -webkit-linear-gradient(#3a2697, #d32dd3);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+	#servicios .contenedorCardsServicios {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+	}
+	#servicios .contenedorCardsServicios .cardServicios {
+		height: 65rem;
+		margin: 3rem;
+		width: 80%;
+	}
+	#contenedorSimulador .contenedorForm .flecha-pasos {
+		width: 90%;
+	}
+	#contenedorSimulador .contenedorForm #formSimulador {
+		display: flex;
+		font-family: "Poppins", sans-serif;
+		padding: 2rem;
+		height: 100%;
+		width: 90%;
+		overflow: hidden;
+		margin: 5rem;
+		justify-content: flex-start;
+	}
+	#contenedorSimulador .contenedorForm #formSimulador .animacionIzq {
+		margin-left: -100%;
+	}
+	#contenedorSimulador .contenedorForm #formSimulador .error {
+		color: #ffffffb4;
+		font-size: 1.5rem;
+	}
+	#contenedorSimulador .contenedorForm #formSimulador .paso {
+		display: block;
+		text-align: center;
+		align-items: center;
+		width: 90%;
+		background-color: #ab42d4de;
+		border: none;
+		border-radius: 1.5rem;
+		transition: all 1s;
+		opacity: 0;
+	}
+	#contenedorSimulador .contenedorForm #formSimulador .active {
+		opacity: 1;
+	}
+	.footer {
+		width: 100%;
+		background-color: #000;
+	}
+	.footer .footerElements {
+		list-style: none;
+		padding: 0;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.footer .footerElements img {
+		margin: 1rem;
+		width: 5rem;
+	}
+}
 
 @media screen and (max-width: 768px) {
-  .navigation {
-    flex-direction: column; }
-    .navigation .navigationLogoContainer .logoFinan {
-      min-width: 100%; }
-    .navigation .navigationContainer {
-      background-image: url(../images/backMenu.svg);
-      width: 100%;
-      height: 100vh;
-      position: fixed;
-      top: 0;
-      right: 0;
-      left: 0;
-      z-index: 10;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      transition: top 1s ease;
-      display: none; }
-      .navigation .navigationContainer .containerLink {
-        width: 100%;
-        height: 5rem; }
-        .navigation .navigationContainer .containerLink .linkItem {
-          color: #fafafa; }
-      .navigation .navigationContainer .menuCerrado {
-        display: block;
-        position: absolute;
-        top: 2rem;
-        right: 2rem; }
-    .navigation .menuAbierto {
-      display: block; }
-    .navigation .navigationButtons {
-      margin: 2rem; }
-      .navigation .navigationButtons button {
-        width: 20rem;
-        height: 4rem; }
-        .navigation .navigationButtons button a {
-          font-size: 1.6rem; }
-  #inicio {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-bottom: 12rem; }
-    #inicio article {
-      border-radius: 12rem;
-      background-color: #8734d9;
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      height: 20%;
-      align-items: center;
-      text-align: center; }
-      #inicio article h2 {
-        font-size: 4rem; }
-    #inicio .contenedorInicioImagen {
-      margin-bottom: 1rem;
-      width: 65%;
-      text-align: center; }
-      #inicio .contenedorInicioImagen img {
-        width: 100%;
-        filter: brightness(120%);
-        filter: contrast(150%); }
-  #confiarEn .contenedorConfiar {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%; }
-    #confiarEn .contenedorConfiar .cardConfiar {
-      margin: 1rem;
-      padding: 2rem;
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      align-items: center;
-      justify-content: center;
-      background: #ffffff;
-      box-shadow: 0 8px 16px 0 rgba(83, 35, 160, 0.404);
-      width: 80%;
-      height: 60rem;
-      border-radius: 4rem; }
-      #confiarEn .contenedorConfiar .cardConfiar img {
-        width: 80%;
-        border-radius: 2rem; }
-      #confiarEn .contenedorConfiar .cardConfiar h3 {
-        font-size: 4rem;
-        color: #000; }
-      #confiarEn .contenedorConfiar .cardConfiar p {
-        font-size: 2rem;
-        color: #000; }
-  #servicios h2 {
-    text-align: center;
-    font-size: 6rem;
-    background: -webkit-linear-gradient(#3a2697, #d32dd3);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; }
-  #servicios .contenedorCardsServicios {
-    display: flex;
-    flex-direction: column;
-    height: 100%; }
-    #servicios .contenedorCardsServicios .cardServicios {
-      height: 65rem;
-      margin: 3rem;
-      width: 80%; }
-  #contenedorSimulador .contenedorForm .flecha-pasos {
-    width: 90%; }
-  #contenedorSimulador .contenedorForm #formSimulador {
-    display: flex;
-    font-family: 'Poppins', sans-serif;
-    padding: 2rem;
-    height: 100%;
-    width: 90%;
-    overflow: hidden;
-    margin: 5rem;
-    justify-content: flex-start; }
-    #contenedorSimulador .contenedorForm #formSimulador .animacionIzq {
-      margin-left: -100%; }
-    #contenedorSimulador .contenedorForm #formSimulador .error {
-      color: #ffffffb4;
-      font-size: 1.5rem; }
-    #contenedorSimulador .contenedorForm #formSimulador .paso {
-      display: block;
-      text-align: center;
-      align-items: center;
-      width: 90%;
-      background-color: #ab42d4de;
-      border: none;
-      border-radius: 1.5rem;
-      transition: all 1s;
-      opacity: 0; }
-    #contenedorSimulador .contenedorForm #formSimulador .active {
-      opacity: 1; }
-  .footer {
-    width: 100%;
-    background-color: #000; }
-    .footer .footerElements {
-      list-style: none;
-      padding: 0;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center; }
-      .footer .footerElements img {
-        margin: 1rem;
-        width: 5rem; } }
+	.navigation {
+		flex-direction: column;
+	}
+	.navigation .navigationLogoContainer .logoFinan {
+		min-width: 100%;
+	}
+	.navigation .navigationContainer {
+		background-image: url(../images/backMenu.svg);
+		width: 100%;
+		height: 100vh;
+		position: fixed;
+		top: 0;
+		right: 0;
+		left: 0;
+		z-index: 10;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		transition: top 1s ease;
+		display: none;
+	}
+	.navigation .navigationContainer .containerLink {
+		width: 100%;
+		height: 5rem;
+	}
+	.navigation .navigationContainer .containerLink .linkItem {
+		color: #fafafa;
+	}
+	.navigation .navigationContainer .menuCerrado {
+		display: block;
+		position: absolute;
+		top: 2rem;
+		right: 2rem;
+	}
+	.navigation .menuAbierto {
+		display: block;
+	}
+	.navigation .navigationButtons {
+		margin: 2rem;
+	}
+	.navigation .navigationButtons button {
+		width: 20rem;
+		height: 4rem;
+	}
+	.navigation .navigationButtons button a {
+		font-size: 1.6rem;
+	}
+	#inicio {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column-reverse;
+		align-items: center;
+		flex-wrap: wrap;
+		margin-bottom: 12rem;
+	}
+	#inicio article {
+		border-radius: 12rem;
+		background-color: #8734d9;
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		height: 20%;
+		align-items: center;
+		text-align: center;
+	}
+	#inicio article h2 {
+		font-size: 4rem;
+	}
+	#inicio .contenedorInicioImagen {
+		margin-bottom: 1rem;
+		width: 65%;
+		text-align: center;
+	}
+	#inicio .contenedorInicioImagen img {
+		width: 100%;
+		filter: brightness(120%);
+		filter: contrast(150%);
+	}
+	#confiarEn .contenedorConfiar {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		height: 100%;
+	}
+	#confiarEn .contenedorConfiar .cardConfiar {
+		margin: 1rem;
+		padding: 2rem;
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		align-items: center;
+		justify-content: center;
+		background: #ffffff;
+		box-shadow: 0 8px 16px 0 rgba(83, 35, 160, 0.404);
+		width: 80%;
+		height: 60rem;
+		border-radius: 4rem;
+	}
+	#confiarEn .contenedorConfiar .cardConfiar img {
+		width: 80%;
+		border-radius: 2rem;
+	}
+	#confiarEn .contenedorConfiar .cardConfiar h3 {
+		font-size: 4rem;
+		color: #000;
+	}
+	#confiarEn .contenedorConfiar .cardConfiar p {
+		font-size: 2rem;
+		color: #000;
+	}
+	#servicios h2 {
+		text-align: center;
+		font-size: 6rem;
+		background: -webkit-linear-gradient(#3a2697, #d32dd3);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+	#servicios .contenedorCardsServicios {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+	}
+	#servicios .contenedorCardsServicios .cardServicios {
+		height: 65rem;
+		margin: 3rem;
+		width: 80%;
+	}
+	#contenedorSimulador .contenedorForm .flecha-pasos {
+		width: 90%;
+	}
+	#contenedorSimulador .contenedorForm #formSimulador {
+		display: flex;
+		font-family: "Poppins", sans-serif;
+		padding: 2rem;
+		height: 100%;
+		width: 90%;
+		overflow: hidden;
+		margin: 5rem;
+		justify-content: flex-start;
+	}
+	#contenedorSimulador .contenedorForm #formSimulador .animacionIzq {
+		margin-left: -100%;
+	}
+	#contenedorSimulador .contenedorForm #formSimulador .error {
+		color: #ffffffb4;
+		font-size: 1.5rem;
+	}
+	#contenedorSimulador .contenedorForm #formSimulador .paso {
+		display: block;
+		text-align: center;
+		align-items: center;
+		width: 90%;
+		background-color: #ab42d4de;
+		border: none;
+		border-radius: 1.5rem;
+		transition: all 1s;
+		opacity: 0;
+	}
+	#contenedorSimulador .contenedorForm #formSimulador .active {
+		opacity: 1;
+	}
+	.footer {
+		width: 100%;
+		background-color: #000;
+	}
+	.footer .footerElements {
+		list-style: none;
+		padding: 0;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.footer .footerElements img {
+		margin: 1rem;
+		width: 5rem;
+	}
+}
 
 @media screen and (max-width: 600px) {
-  .navigation {
-    flex-direction: column; }
-    .navigation .linkLogo {
-      height: max-content; }
-    .navigation .navigationButtons {
-      flex-direction: column;
-      margin: 2rem; }
-      .navigation .navigationButtons button {
-        margin: 1rem;
-        width: 20rem;
-        height: 4rem; }
-        .navigation .navigationButtons button a {
-          font-size: 1.6rem; } }
+	.navigation {
+		flex-direction: column;
+	}
+	.navigation .linkLogo {
+		height: max-content;
+	}
+	.navigation .navigationButtons {
+		flex-direction: column;
+		margin: 2rem;
+	}
+	.navigation .navigationButtons button {
+		margin: 1rem;
+		width: 20rem;
+		height: 4rem;
+	}
+	.navigation .navigationButtons button a {
+		font-size: 1.6rem;
+	}
+}
