@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;500&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="CSS/Styles.css">
     <title>FinanceAR</title>  
@@ -13,20 +14,22 @@
 <body>
     <header>
         <nav class="navigation">
-            <a href=""><img class="logoFinan" src="images/financearlogo.svg" alt=""></a>
+            <a class="linkLogo" href=""><img class="logoFinan" src="images/financearlogo.svg" alt=""></a>
+            <div class="menuAbierto"><i class="fas fa-bars"></i></div>
             <ul class="navigationContainer">
                 <li class="containerLink">
-                    <a href="#inicio" class="linkItem">Home</a>
+                    <a id="linkInicio" href="#inicio" class="linkItem">Home</a>
                 </li>
                 <li class="containerLink">
-                    <a href="#confiarEn" class="linkItem">Quienes somos</a>
+                    <a id="linkConfiar" href="#confiarEn" class="linkItem">Porque elegirnos?</a>
                 </li>
                 <li class="containerLink">
-                    <a href="#servicios" class="linkItem">Servicios</a>
+                    <a id="linkServicios" href="#servicios" class="linkItem">Servicios</a>
                 </li>
                 <li class="containerLink">
-                    <a href="#simulador" class="linkItem">Simula tu prestamo!</a>
+                    <a id="linkSimulador" href="#contenedorSimulador" class="linkItem">Simula tu prestamo!</a>
                 </li>
+                <div class="menuCerrado"><i class="fa fa-times"></i></div>
             </ul>
             <div class="navigationButtons">
                 <button class="buttons__login"><a href="">Iniciar Sesion</a></button>
@@ -36,8 +39,8 @@
     </header>
     <section id="inicio">
         <article>
-            <h2>Te brindamos la solucion que necesitas, <span>con un solo click</span></h2>
-            <button><a href="">Empeza a operar</a></button>
+            <h2>Te brindamos la solucion que necesitas <br> <span>con un solo click</span></h2>
+            <button><a href="#contenedorSimulador">Empeza a operar</a></button>
         </article>
         <div class="contenedorInicioImagen">
             <img src="images/humansvg.svg" alt="persona con su pc">
@@ -96,72 +99,67 @@
 
         <div class="contenedorForm">
 
-            <form id="formSimulador0" action="">
-                <h3>Formulario Solicitud Crediticia</h3>
-                <p>
-                    Bienvenido a nuestro simulador de prestamos! Si te interesa obtener
-                    uno, llena el siguiente formulario y descubri que oferta tenemos para vos.
-                    Bienvenido a nuestro simulador de prestamos! Si te interesa obtener
-                    uno, llena el siguiente formulario y descubri que oferta tenemos para vos.
-                    Bienvenido a nuestro simulador de prestamos! Si te interesa obtener
-                    uno, llena el siguiente formulario y descubri que oferta tenemos para vos.
-                </p>
-                <div class="contenedorBotones">
-                    <button id="siguiente1" type="button">Siguiente</button>
-                </div>
-            </form>
-    
-            <form id="formSimulador1" action="">
-                <h3>Ingresa tus datos</h3>
-                <input id="nombre" type="text" placeholder="Nombre" required>
-                <input id="apellido" type="text" placeholder="apellido" required>
-                <input id="mail" type="email" placeholder="email" required>
-    
-                <div class="contenedorBotones">
-                    <button id="anterior0" type="button">Anterior</button>
-                    <button id="siguiente2" type="button">Siguiente</button>
-                </div>
-            </form>
-    
-            <form id="formSimulador2" action="">
-                <h3>Informacion Laboral</h3>
-                <input type="text" id="empleo" placeholder="Nombre de la empresa" required>
-                <input type="number" id="antiguedad" placeholder="Antigüedad laboral (en meses)" required>
-                <input type="number" id="sueldo" placeholder="Sueldo neto del ultimo mes" required>
-    
-                <div class="contenedorBotones">
-                    <button id="anterior1" type="button">Anterior</button>
-                    <button id="siguiente3" type="button">Siguiente</button>
-                </div>
-            </form>
-    
-            <form id="formSimulador3" action="">
-                <h3>Solicitud de Prestamo</h3>
-                <input type="number" id="aSolicitar" max="200000" placeholder="Monto a Solicitar" required>
-                <select name="menuPlazos" id="menuPlazos" class="inputsValues" required>
-                    <option value="0">Elegi una Opcion</option>
-                    <option type="number" value="12">12 meses</option>
-                    <option type="number" value="24">24 meses</option>
-                    <option type="number" value="36">36 meses</option>
-                </select>
-                <input disabled placeholder="TEM(Tasa Efectiva Mensual)" id="tasasSeleccion">
-    
-                <div class="contenedorBotones">
-                    <button id="anterior2" type="button">Anterior</button>
-                    <button id="siguiente4" class="botonCalc" type="button">Enviar</button>
-                </div>
-            </form>
-            <form id="formSimulador4" action="">
-                <h3>Felicitaciones! Tu solicitud fue enviada</h3>
-                <button id="botonEnviar" type="button">Tu solicitud detallada</button>
-            </form>
-    
             <div class="flecha-pasos">
                 <div id="progreso"></div>
                 <div class="pasos-flecha"><small><img class="paso1" src="images/one.svg"></small></div>
                 <div class="pasos-flecha"><small><img class="paso2" src="images/two.svg"></small></div>
                 <div class="pasos-flecha"><small><img class="paso3" src="images/three.svg"></small></div>
                 <div class="pasos-flecha"><small><img class="paso4" src="images/four.svg"></small></div>
+            </div>
+            <div id="formSimulador" method="" action="">
+                
+                <form class="paso active" id="paso-1">
+                  <h3>Solicitud Crediticia</h3>
+                  <p>
+                      Bienvenido a nuestro simulador de prestamos! Si te interesa obtener
+                      uno, llena el siguiente formulario y descubri que oferta tenemos para vos.
+                  </p>
+                  <button id="siguiente1" data-paso="1" data-al_paso="2" class="siguienteButton" type="button">Siguiente</button>
+                </form>
+            
+                <form class="paso" id="paso-2">
+                  <h3>Datos Personales</h3>
+                  <div class="contenedorInputs">
+                    <input id="nombre" class="" type="text" name="nombre" required placeholder="Nombre"></input>
+                    <input id="apellido" class="" type="text" name="apellido" required placeholder="Apellido">
+                    <input id="mail" class="" type="email" name="mail" required placeholder="Email" >
+                  </div>
+                  <button id="anterior0" data-paso="2" data-al_paso="1"  class="anteriorButton" type="button">Anterior</button>
+                  <button id="siguiente2" data-paso="2" data-al_paso="3" class="siguienteButton" type="button">Siguiente</button>
+                </form>   
+            
+                <form class="paso" id="paso-3">
+                  <h3>Datos Laborales</h3>
+                  <div class="contenedorInputs">
+                    <input type="text" id="empleo" class="" name="empleo" placeholder="Nombre de la empresa" required>
+                    <input type="number" id="antiguedad" name="antiguedad" class="" placeholder="Antigüedad laboral (en meses)" required>
+                    <input type="number" id="sueldo" name="sueldo" class="" placeholder="Sueldo neto del ultimo mes" required>
+                  </div>  
+                  <button id="anterior1" class="anteriorButton" data-paso="3" data-al_paso="2"  type="button">Anterior</button>
+                  <button id="siguiente3" class="siguienteButton" data-paso="3" data-al_paso="4"  type="button">Siguiente</button>
+                </form>
+            
+                <form class="paso" id="paso-4">
+                  <h3>Solicitud de Prestamo</h3>
+                  <div class="contenedorInputs">
+                    <input type="number" id="aSolicitar" name="monto" class="" max="200000" placeholder="Monto a Solicitar" required>
+                    <select name="menuPlazos" id="menuPlazos" class="inputsValues" required>
+                        <option value="default">Elegi una Opcion</option>
+                        <option type="number" value="12">12 meses</option>
+                        <option type="number" value="24">24 meses</option>
+                        <option type="number" value="36">36 meses</option>
+                    </select>
+                    <input disabled placeholder="TEM(Tasa Efectiva Mensual)" id="tasasSeleccion">
+                  </div>
+                  <button id="anterior2" data-paso="4" data-al_paso="3"  class="anteriorButton" type="button">Anterior</button>
+                  <button id="siguiente4" data-paso="4" data-al_paso="5"  class="siguienteButton botonCalc" type="button">Enviar</button>
+                  </form>
+            
+                <form class="paso" id="paso-5">
+                    <h3>Felicitaciones! <br> Tu solicitud fue enviada</h3>
+                    <p>Te invitamos a descargar el arhivo PDF completo, con el detalle de tu solicitud</p>
+                    <button id="botonEnviar" type="submit">Tu solicitud detallada</button>
+                </form>
             </div>
         </div>
         <article class="contenedorTabla">
@@ -204,6 +202,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.20/jspdf.plugin.autotable.min.js"></script>  
     <script src="JS/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js" integrity="sha512-37T7leoNS06R80c8Ulq7cdCDU5MNQBwlYoy1TX/WUsLFC2eYNqtKlV0QjH7r8JpG/S0GUMZwebnVFLPd6SU5yg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="JS/validacionAnimaciones.js"></script>
     <script src="JS/main.js"></script>
 </body>
 </html>
