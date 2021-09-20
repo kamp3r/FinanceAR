@@ -73,7 +73,7 @@ class Clientes {
 
 var client = new Clientes();
 
-const datosTabla = document.querySelector('#tftable, tbody');
+const datosTabla = $('#tftable, tbody');
 
 //Variar valores de tasas
 const tasas = cambiarValorTasas();
